@@ -36,16 +36,21 @@ export default function Navbar() {
             : "bg-white/30 backdrop-blur-md border border-white/20"
         }`}
       >
-        <a href="#top" className="flex items-center gap-2 group">
-          <Mark />
-          <div className="leading-none">
-            <div className="font-semibold tracking-tight text-ink-950 text-[15px]">
-              Serincoex
-            </div>
-            <div className="font-mono text-[10px] text-ink-500 tracking-wide tabular">
-              SAS · NIT 902.015.387-2
-            </div>
-          </div>
+        <a
+          href="#top"
+          className="flex items-center gap-3 group pl-1"
+          aria-label="Serincoex — Inicio"
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/logo.png"
+            alt="Serincoex"
+            className="h-9 w-auto select-none"
+            draggable={false}
+          />
+          <span className="hidden xl:inline font-mono text-[10px] text-ink-500 tracking-wide tabular border-l border-ink-200 pl-3">
+            NIT 902.015.387-2
+          </span>
         </a>
 
         <ul className="hidden lg:flex items-center gap-1">
@@ -117,30 +122,3 @@ export default function Navbar() {
   );
 }
 
-function Mark() {
-  return (
-    <svg
-      width="36"
-      height="36"
-      viewBox="0 0 36 36"
-      className="rounded-xl"
-      aria-hidden
-    >
-      <defs>
-        <linearGradient id="m" x1="0" x2="1" y1="0" y2="1">
-          <stop offset="0%" stopColor="#1564d4" />
-          <stop offset="100%" stopColor="#0e2548" />
-        </linearGradient>
-      </defs>
-      <rect width="36" height="36" rx="10" fill="url(#m)" />
-      <path
-        d="M9 23 L18 9 L27 23 M13 19 H23"
-        stroke="white"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        fill="none"
-      />
-    </svg>
-  );
-}

@@ -25,17 +25,16 @@ export default function Footer() {
 
       <div className="relative mx-auto max-w-[1320px] px-6">
         <div className="grid grid-cols-12 gap-6 pb-16">
-          <div className="col-span-12 lg:col-span-6 space-y-6">
-            <div className="flex items-center gap-3">
-              <Mark />
-              <div>
-                <div className="font-display text-[22px] tracking-tight">
-                  Serincoex
-                </div>
-                <div className="font-mono text-[11px] text-ink-400 tabular">
-                  SAS · NIT 902.015.387-2
-                </div>
-              </div>
+          <div className="col-span-12 lg:col-span-6 space-y-8">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/logo.png"
+              alt="Serincoex"
+              className="h-16 w-auto select-none"
+              draggable={false}
+            />
+            <div className="font-mono text-[11px] text-ink-400 tabular">
+              SAS · NIT 902.015.387-2
             </div>
             <h3 className="font-display text-[40px] lg:text-[56px] leading-[0.98] tracking-tightest text-white max-w-[14ch]">
               Logística que mueve su carga sin fricción.
@@ -137,24 +136,3 @@ function SocialLink({
   );
 }
 
-function Mark() {
-  return (
-    <svg width="36" height="36" viewBox="0 0 36 36" className="rounded-xl" aria-hidden>
-      <defs>
-        <linearGradient id="mf" x1="0" x2="1" y1="0" y2="1">
-          <stop offset="0%" stopColor="#4fa6ff" />
-          <stop offset="100%" stopColor="#1450ab" />
-        </linearGradient>
-      </defs>
-      <rect width="36" height="36" rx="10" fill="url(#mf)" />
-      <path
-        d="M9 23 L18 9 L27 23 M13 19 H23"
-        stroke="white"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        fill="none"
-      />
-    </svg>
-  );
-}
